@@ -7,20 +7,20 @@ module CONV_ACC #(
     parameter buf_addr_width = 5,
     parameter buf_depth      = 16
 ) (
-    input  clk,
-    input  rst_n,
-    input  start_conv,
-    input  [1:0] cfg_ci,
-    input  [1:0] cfg_co,
-    input  [63:0] ifm,
-    input  [31:0] weight,
-    output [24:0] ofm_port0,
-    output [24:0] ofm_port1,
-    output ofm_port0_v,
-    output ofm_port1_v,
-    output ifm_read,
-    output wgt_read,
-    output end_conv
+    input wire clk,
+    input wire rst_n,
+    input wire  start_conv,
+    input wire [1:0] cfg_ci,
+    input wire [1:0] cfg_co,
+    input wire [63:0] ifm,
+    input wire [31:0] weight,
+    output wire [24:0] ofm_port0,
+    output wire [24:0] ofm_port1,
+    output wire ofm_port0_v,
+    output wire ofm_port1_v,
+    output wire ifm_read,
+    output wire wgt_read,
+    output wire end_conv
 );
 
     /// Assign ifm to each pes
